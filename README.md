@@ -1,5 +1,5 @@
 # GPU-enabled-vSphere-guest-hangs
-I needed somewhere to permanently store this issue I've resolved on three separate occasions, separated by a number of months.  
+I needed somewhere to permanently store the solution for this issue that I've resolved on three separate occasions, separated by a number of months.  
 ### So your direct-io GPU-enabled vSphere guest only boots to the Windows logo and then hangs.  
    1.  Unregister the VM
    2.  ```ssh root@192.168.1.99; cd /vmfs/volumes/datastore1/YOUR-VM; vi YOUR-VM.vmx;``` Strike **i** and change **virtualHW.version** from **19** to **17**
