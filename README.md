@@ -15,3 +15,17 @@ I needed somewhere to permanently store the solution for this issue that I've re
    12.  Change **SVGA.PRESENT** to **FALSE**
    13.  Power on the virtual machine.  
 
+### Update: 2022-07-23
+[https://communities.vmware.com/t5/VMware-vSphere-Discussions/Deep-investigation-on-GPU-Passthrough-not-working-anymore-after/m-p/457418/highlight/true#M1687](https://communities.vmware.com/t5/VMware-vSphere-Discussions/Deep-investigation-on-GPU-Passthrough-not-working-anymore-after/m-p/457418/highlight/true#M1687)  
+
+I found that I needed to edit ```/etc/vmware/passthru.map```
+Look for
+```sh
+# NVIDIA
+10de  ffff  bridge   false
+```
+and add 
+```sh
+10de  1401  d3d0     false
+```  
+underneath it.
