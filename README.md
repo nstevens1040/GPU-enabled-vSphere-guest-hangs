@@ -29,3 +29,12 @@ and add
 10de  1401  d3d0     false
 ```  
 underneath it.
+
+### Update: 2022-10-22
+[https://tinkertry.com/vmware-vsphere-esxi-7-gpu-passthrough-ui-bug-workaround](https://tinkertry.com/vmware-vsphere-esxi-7-gpu-passthrough-ui-bug-workaround)  
+
+I'm also finding it necessary to execute the command below in an esxi shell to force the host to release GPU resources.
+```sh
+esxcli system settings kernel set -s vga -v FALSE
+```
+
