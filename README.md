@@ -14,7 +14,7 @@ This time I took a number of different steps that at least appear to have resolv
    8.  Power on the virtual machine
    9.  RDP into the VM. Launch devmgmt.msc. Show hidden devices. Uninstall any non-VMWare display drivers. Enable the VMWare display driver.
    10. Download [Display Driver Uninstaller](https://ftp.nluug.nl/pub/games/PC/guru3d/ddu/%5BGuru3D.com%5D-DDU.zip). Extract the zip file ```[Guru3D.com]-DDU.zip```. Then run the executable ```.\[Guru3D.com]-DDU\DDU v18.0.8.9.exe```. This will extract the software to ```\[Guru3D.com]-DDU\DDU v18.0.8.9\```. It's best practice to run the uninstaller in safe mode. So don't run the uninstaller yet.
-   11. Launch **msconfig**, tab over to **Boot** and then check the box entitled **Safe boot** and then check the box next to **Network**. Reboot the VM
+   11. Launch **msconfig**, tab over to **Boot**, check the box entitled **Safe boot** and then check the box next to **Network**. Reboot the VM
    12. Launch the VMWare Remote Console by clicking **Actions** → **Console** → **Launch remote console** in ESXi. Log into Windows once the console connects to the guest VM. It should be in safe mode.
    13. Now run the  **Display Driver Uninstaller** executable ```\[Guru3D.com]-DDU\DDU v18.0.8.9\Display Driver Uninstaller.exe``` as administrator.
    14. Select *Device Type* → **GPU** from the drop down menu and then *Device* → **NVIDIA** from the second drop-down menu. Then click on **Clean and do NOT restart**.
